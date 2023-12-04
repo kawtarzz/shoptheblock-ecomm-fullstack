@@ -1,0 +1,81 @@
+.App {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  color: rgb(13, 2, 34);
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  vertical-align: baseline;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header {
+  width: 100%;
+  background-color: rgb(164, 219, 255);
+  list-style: none;
+  font-display: flex;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.user-nav {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  margin-bottom: 5rem;
+  position: relative;
+  width: 10%;
+}
+
+.App-logo {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  ;
+  color: rgb(191, 0, 249);
+  pointer-events: all;
+  vertical-align: baseline;
+}
+
+.filter-con {
+  float: left;
+  background-color: pink;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.search-con {
+  float: left;
+  padding: 0.5rem 0.5rem;
+  width: 100%;
+}
+
+.submit-con {
+  width: 20%;
+  float: right;
+}
+
+.container {
+  display: block;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  width: 100%;
+  background: white;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
