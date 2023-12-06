@@ -26,7 +26,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div id="root">
       <Router>
         <ApplicationViews isLoggedIn={isLoggedIn} user={user} />
       </Router>

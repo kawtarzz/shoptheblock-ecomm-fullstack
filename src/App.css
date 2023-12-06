@@ -79,3 +79,26 @@
   align-items: center;
   width: 100%;
 }
+
+.home-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+  height: 46vw;
+  background: rgb(13, 2, 34);
+  filter: blur(1px);
+  z-index: 0;
+}
+
+.home-text {
+  position: absolute;
+  top: 80%;
+  left: 45%;
+  transform: translate(-60%, -180%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgb(254, 253, 254);
+  z-index: 1;
+}

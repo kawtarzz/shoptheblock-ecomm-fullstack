@@ -1,34 +1,43 @@
-import React, { useEffect, useState } from "react";
-import { Card, Button, ButtonGroup } from "reactstrap";
-import { Input } from "reactstrap";
-import Product from "./product/Product";
-import { getProducts } from "../modules/productManager";
-import Container from "reactstrap/lib/Container";
-import Label from "reactstrap/lib/Label";
-import Row from "reactstrap/lib/Row";
-import Col from "reactstrap/lib/Col";
-import Header from './Header'
-
+import React from 'react'
+import { useState, useEffect } from 'react'
+import Product from './product/Product'
+import { getProducts } from '../modules/productManager'
+import { ButtonGroup, Label, Card, CardHeader, CardTitle } from 'reactstrap'
 
 export const Home = ({ user, isLoggedIn }) => {
-  const [products, setProducts] = useState([]);
+  return (
+    <>
+      <div className="home">
+        <div className="container">
+          <img className="home-banner" src="https://cdn-v2.theculturetrip.com/1280x713/wp-content/uploads/2016/09/7_22_2016-nappi-studio-interiors-7.webp" alt="" />
+        </div>
+        <h1 className="home-text"> Support your local artists, online</h1>
+        <hr></hr>
+        <div className="container">
+          <h2 className="home">Shop</h2>
+          <p className="home">Browse through our collection of art.</p>
+          <div className="gallery-container">
+            <ProductGallery />
+            <h2 className="home">Discover</h2>
+            <p className="home">Find your next favorite artist, or discover something new.</p>
+            <h2 className="home">Support</h2>
+            <p className="home">Support your favorite artists by buying their work.</p>
+          </div>
+
+        </div>
+      </div>
+    </>
+  )
+
+}
+
+const ProductGallery = () => {
+  const [products, setProducts] = useState([])
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    getProducts().then(setProducts);
-  }, []);
-
-  const handleSearch = () => {
-    if (searchTerm === "") {
-      getProducts().then(setProducts);
-    } else {
-      const searchResults = products.filter((product) =>
-        product.name.toLowerCase().includes(searchTerm.toLowerCase()) || product.description.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setProducts(searchResults);
-    }
-  };
+    getProducts().then(products => setProducts(products))
+  }, [])
 
   const handleCategoryFilter = (categoryName) => {
     setSelectedCategory(categoryName === "all" ? null : categoryName);
@@ -39,64 +48,35 @@ export const Home = ({ user, isLoggedIn }) => {
   const filteredProducts = selectedCategory ? products.filter((p) => p.category.name === selectedCategory) : products;
 
   return (
-    <>
-      <Header isLoggedIn={isLoggedIn} user={user} />
-      <div className="filter-con">
-        <div className="search-con">
-          <div id="search-con">
-            <input type="search" name="search" id="search" data-mini="true" placeholder="Search for Products" data-theme="a"
-              value={searchTerm}
-              onChange={(evt) => setSearchTerm(evt.target.value)} />
-            <button type="submit" value="Go" id="submit" variant="secondary" onClick={handleSearch}>Search</button>
-          </div>
-        </div>
-        <Row>
-          <Col>
-            <Label htmlFor="label-text">Filter by Category: </Label>
-            <select
-              name="category"
-              id="category"
-              onChange={(evt) => handleCategoryFilter(evt.target.value)}
-            >
-              <option value="all">All Products</option>
-              {categoryNames.map((categoryName) => (
-                <option key={categoryName} value={categoryName}>
-                  {categoryName}
-                </option>
-              ))}
-            </select>
-          </Col>
-        </Row>
-        <div className="home-con">
-          <div>
-
-            <Label htmlFor="label-text">Sort by Price:</Label>
-            <ButtonGroup>
-              {' '}
-              <button onClick={() => {
-                const sortedProducts = [...products].sort((a, b) => a.price - b.price)
-                setProducts(sortedProducts)
-              }}>Lowest first</button>
-              <button onClick={() => {
-                const sortedProducts = [...products].sort((a, b) => b.price - a.price)
-                setProducts(sortedProducts)
-              }}>Highest first</button>
-            </ButtonGroup>
-          </div>
-        </div>
-        <Card className="product-list">
-          <Row>
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="
-              col-xs-12
-              col-sm-8
-              col-lg-4">
-                <Product key={product.id} product={product} />
-              </div>
+    <div className="container">
+      <Card>
+        <CardHeader>
+          <CardTitle>
+            <Label htmlFor="label-text">
+              <h3>
+                Shop by Category
+              </h3></Label>
+          </CardTitle>
+          <ButtonGroup>
+            {categoryNames.map((categoryName) => (
+              <button key={categoryName} value={categoryName}
+                onClick={() => handleCategoryFilter(categoryName)}>
+                {categoryName}
+              </button>
             ))}
-          </Row>
-        </Card>
-      </div>
-    </>
-  );
+          </ButtonGroup>
+        </CardHeader>
+        <div className="product-gallery">
+          {filteredProducts.map((product) => (
+            <div key={product.id} className="
+          col-xs-12
+          col-sm-8
+          col-lg-4">
+              <Product key={product.id} product={product} />
+            </div>
+          ))}
+        </div>
+      </Card>
+    </div >
+  )
 }
