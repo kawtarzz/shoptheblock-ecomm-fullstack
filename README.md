@@ -2,7 +2,7 @@ ShoptheBlock is an full-stack e-commerce application built to fulfill Nashville 
 _______________________________________________________________________________
 
 PROBLEM
-
+npm
 Independent sellers & artists need a platform to market their art in a collective online space that can be localized to their community. 
 
 OVERVIEW 
@@ -30,6 +30,5 @@ PROJECT MVP FEATURES
         Firebase Auth + JWT
 _______________________________________________________________________________
 
-This project ran the gamut of challenging development from concept to MVP- from structuring data entity relationships to hours spent dropping breakpoints front and back to solve broken API calls, only to find an extra comma in the SQL query. 
-C# Web API, Redux, JWT tokens, and HTTP methods and API development in general. Having completed the front-end half of the course which included a client capstone that utlized JSON RESTful API services with React.JS, I was confident in my abilities to build the UI, but I was quickly humbled by the months spent focusing my energy on learning C#, SQL methods, and learning other back-end technologies.  Although I would have loved to implement a few additional features such as an admin view with varied account priveleges including a product form and seller dashboard, as well as additional sort/filtering on the default user view, I met my minimum viable product by demo day and was proud to graduate from the program.
+This project ran the gamut of challenges from concept to MVP- from structuring data entity relationships to hours spent dropping breakpoints front and back to solve broken API calls, only to find an extra comma in the SQL query. Having completed the front-end half of the course which included a client capstone that utlized JSON RESTful API services with React.JS, I was confident in my abilities to build the UI, but I was quickly humbled by the months spent focusing my energy on C#, SQL methods, and learning other back-end technologies. Although I would have loved to implement a few additional features such as an admin view with varied account priveleges including a product form and seller dashboard, as well as additional sort/filtering on the default user view, I met my minimum viable product by demo day and was proud to graduate from the program.
 

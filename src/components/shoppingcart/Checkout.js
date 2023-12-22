@@ -26,7 +26,7 @@ export default function Checkout({ user, cartItems }) {
 
   return (
     <>
-      <Card style={{ width: '60rem' }}>
+      <Card style={{ width: '60rem' }} className="container">
         {cart.map((cartItem) => (
           <div key={cartItem.id} >
             <ListGroup>

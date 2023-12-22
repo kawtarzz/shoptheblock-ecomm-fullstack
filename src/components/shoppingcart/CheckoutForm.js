@@ -28,7 +28,7 @@ export default function CheckoutForm({ user, setCart }) {
 
 
   return (
-    <Card>
+    <Card className="container">
       <Form>
         <div className="row d-flex justify-content-end">
           <div className="col">

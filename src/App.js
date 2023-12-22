@@ -29,6 +29,7 @@ function App() {
     <div id="root">
       <Router>
         <ApplicationViews isLoggedIn={isLoggedIn} user={user} />
+
       </Router>
     </div>
   );
