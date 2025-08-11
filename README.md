@@ -1,35 +1,118 @@
-ShoptheBlock is an full-stack e-commerce application built to fulfill Nashville Software School's Full-stack Software Development program requirements. This application was my opportunity to utilize both my front and back-end skillset. 
-_______________________________________________________________________________
+ShopTheBlock - Local Artist Marketplace
 
-PROBLEM
+A full-stack e-commerce application built as my capstone project for Nashville Software School's Full-Stack Software Development program. This marketplace empowers independent sellers and artists with a platform to market their art in a collective online space localized to their community.
 
-Independent sellers & artists need a platform to market their art in a collective online space that can be localized to their community. 
+##  [Live Demo](https://locus-app-f0eb9.web.app/login)
+*Frontend deployment available - use Guest Login to explore*
+## [shoptheblock Video Demo](https://github.com/user-attachments/assets/bf0eed8b-2023-4ecc-8756-b76c5b2e4407)
 
-OVERVIEW 
+##  Problem Statement
 
-Introducing, Shop the Block! An online marketplace where you can browse and shop for products from local artists & makers. 
-PROJECT MVP FEATURES
+Independent sellers & artists need a platform to market their art in a collective online space that can be localized to their community.
 
--When the user is logged in, the page will populate with available products.
--When a product is selected, a new page loads showing product details, a quantity selector, and an “Add to Cart” Button.
--Given the user selects ‘add to cart’, the product will remain in their cart as they continue shopping.
--When the user re-opens their cart and selects “proceed to checkout”, they are presented with the checkout form that includes: payment & delivery info. 
--When the user submits the checkout form they will receive a confirmation number.
+##  Solution
+
+Shop the Block! An online marketplace where you can browse and shop for products from local artists & makers, creating a dedicated community-focused platform for local creators.
+
+##  MVP Features
+
+- **Authentication-Based Product Display**: When logged in, users can browse all available products
+- **Detailed Product Views**: Product selection loads detailed pages with quantity selectors and "Add to Cart" functionality
+- **Persistent Shopping Cart**: Products remain in cart as users continue shopping across sessions
+- **Streamlined Checkout Process**: Complete checkout form with payment and delivery information
+- **Order Confirmation**: Users receive confirmation numbers upon successful checkout
+- **Responsive Design**: Mobile-first approach ensuring great experience across all devices
+
+## 🛠️ Built With
+
+**Frontend:**
+- React.js
+- HTML5 & CSS3
+- Bootstrap
+
+**Backend:**
+- C# + ASP.NET Core
+- .NET Framework
+- Microsoft SQL Server
+
+**Authentication & Security:**
+- Firebase Auth
+- JWT Tokens
+
+**Deployment:**
+- Firebase Hosting (Frontend)
+
+##  Development Journey
+
+This project was a comprehensive full-stack challenge that tested everything from concept to MVP:
+
+- **Database Design**: Structuring complex data entity relationships for e-commerce functionality
+- **API Development**: Building robust C# Web API endpoints with proper HTTP methods
+- **Authentication**: Implementing secure user authentication with Firebase Auth and JWT tokens
+- **Frontend Integration**: Connecting React frontend with .NET backend through RESTful APIs
+- **Debugging Challenges**: Extensive troubleshooting of API calls, SQL queries, and cross-platform integration
+
+**Key Learning Outcomes:**
+- Mastered full-stack development workflow from database to user interface
+- Gained proficiency in C#, SQL methods, and backend technologies
+- Developed expertise in React.js and RESTful API integration
+- Enhanced problem-solving skills through complex debugging scenarios
+
+##  Future Enhancements
+
+Planned features for future development:
+- **Admin Dashboard**: Seller accounts with product management capabilities
+- **Enhanced Filtering**: Advanced sort and filter options for improved user experience
+- **Seller Analytics**: Dashboard for artists to track sales and performance
+- **Category Management**: Dynamic product categorization system
+
+##  Screenshots
+![shoptheblock_01](https://github.com/user-attachments/assets/abdc7826-a522-4e6d-812c-fa5f50f279f1)
 
 
-------- Built With
+##  Architecture
 
-        React JS
-        HTML
-        CSS
-        Bootstrap
+- **Frontend**: React SPA with component-based architecture
+- **Backend**: ASP.NET Core Web API with Repository pattern
+- **Database**: SQL Server with relational design
+- **Authentication**: Firebase for user management
 
-        C# + ASP.NET
-        .NET Framework
-        Microsoft SQL Server
-        Firebase Auth + JWT
-_______________________________________________________________________________
+##  Getting Started
 
-This project ran the gamut of challenging development from concept to MVP- from structuring data entity relationships to hours spent dropping breakpoints front and back to solve broken API calls, only to find an extra comma in the SQL query. 
-C# Web API, Redux, JWT tokens, and HTTP methods and API development in general. Having completed the front-end half of the course which included a client capstone that utlized JSON RESTful API services with React.JS, I was confident in my abilities to build the UI, but I was quickly humbled by the months spent focusing my energy on learning C#, SQL methods, and learning other back-end technologies.  Although I would have loved to implement a few additional features such as an admin view with varied account priveleges including a product form and seller dashboard, as well as additional sort/filtering on the default user view, I met my minimum viable product by demo day and was proud to graduate from the program.
+### Prerequisites
+- Node.js (v14 or higher)
+- .NET Core SDK
+- SQL Server
+- Firebase project setup
 
+### Frontend Setup
+
+1. Clone the repository
+
+git clone https://github.com/kawtarzz/shoptheblock.git
+cd shoptheblock/client
+
+2. Install dependencies
+        bashnpm install
+
+3. Start the development server
+        bashnpm start
+### Backend Setup
+
+1. Navigate to the server directory
+
+2. Restore packages
+
+3. Update database connection string in appsettings.json
+        Run migrations
+
+4. Start the API
+API Endpoints
+
+GET /api/products - Retrieve all products
+POST /api/products - Create new product
+GET /api/users/{id} - Get user profile
+POST /api/orders - Create new order
+
+
+KawtaryAzzouzi@gmail.com
